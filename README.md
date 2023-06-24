@@ -1,9 +1,9 @@
-# p62-PPW
+# p62-XEDM-PPW
 
 # Universidad Politécnica Salesiana
 Carrera de Ingeniería en Ciencias de la Computación
 
-Xavier Disintonio Molina / XaviDisint_YT
+Xavier Disintonio Molina / XaviDisint_YT / xdisintonio@est.ups.edu.ec
 
 # Curso de Programación y Plataformas Web
 
