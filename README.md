@@ -3,7 +3,7 @@
 # Universidad Politécnica Salesiana
 Carrera de Ingeniería en Ciencias de la Computación
 
-Xavier Disintonio
+Xavier Disintonio Molina / XaviDisint_YT
 
 # Curso de Programación y Plataformas Web
 
