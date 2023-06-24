@@ -3,7 +3,7 @@
 # Universidad Politécnica Salesiana
 Carrera de Ingeniería en Ciencias de la Computación
 
-Xavier Disintonio Molina / PSN:XaviDisint_YT / xdisintonio@est.ups.edu.ec
+Xavier Disintonio Molina / PSN: XaviDisint_YT / xdisintonio@est.ups.edu.ec
 
 # Curso de Programación y Plataformas Web
 
