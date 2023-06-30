@@ -35,6 +35,11 @@ a:active.menu {
     padding: 10px;
     border: 1px solid orange;
 }
+.cuadro {
+    background-color: white;
+    padding: 190px;
+    border: 1px solid black;
+}
 
 .header {
     grid-area: header;
