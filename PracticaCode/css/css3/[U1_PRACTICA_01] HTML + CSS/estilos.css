@@ -1,0 +1,233 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* 1rm = 10px */
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 2;
+}
+
+header {
+	width: 100%;
+	height: 15rem;
+	background-color: orange;
+}
+
+footer {
+	width: 100%;
+	height: 12rem;
+	background-color: orange;
+	
+}
+
+a{
+	display: block;
+	margin: 10px;
+	background-color: #ff9924;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+main {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+	height: 63rem;
+}
+
+aside {
+	flex: 1;
+	border: 0.1rem solid #ff9924;
+	margin: 0.5rem 0 0.5rem 0;
+	padding: 1rem;
+}
+
+.contenedor {
+	border: 0.1rem solid #ff9924;
+	padding: 8rem;
+	margin: 0.5rem 0 0.5rem 0;
+	flex: 3;
+}
+
+
+.urbanizacion {
+	position: relative;
+	border: 0.1rem solid rgb(20, 20, 20);
+	flex: 3;
+	width: 100%;
+	height: 100%;
+}
+
+.manzana {
+	position: absolute;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.manzana-uno {
+	width: 50%;
+	height: 20%;
+    padding: 5px;
+	left: 50%;
+	transform: translate(-50%);
+}
+.manzana-uno {
+	width: 55.2rem;
+	height: 11.1rem;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.manzana-dos {
+	width: 12.5%;
+	height: 20%;
+	top: 10%;
+	left: 100%;
+	transform: translate(-100%);
+}
+
+.manzana-tres {
+	width: 47.5%;
+	height: 20%;
+	top: 100%;
+	left: 50%;
+	transform: translate(-40%, -100%);
+}
+
+.manzana-cuatro {
+	width: 12.5%;
+	height: 20%;
+	top: 10%;
+}
+
+.manzana-cinco {
+	width: 40%;
+	height: 20%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-32%, -50%);
+}
+
+.manzana-cinco::before {
+	content: "";
+	position: absolute;
+	right: 100%;
+	width: 30%;
+	height: 145%;
+	border: 0.2rem solid rgb(0, 0, 0);
+}
+
+.villa {
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 11rem;
+	width: 100%;
+	height: 100%;
+	border: 0.1rem solid rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5rem;
+	background-color: rgb(92, 240, 92);
+}
+
+.villa_blanca{
+    text-align: center;
+	line-height: 11rem;
+	width: 100%;
+	height: 100%;
+	border: 0.1rem solid rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5rem;
+    background-color: white;
+}
+
+.villa_gris{
+    text-align: center;
+	line-height: 11rem;
+	width: 100%;
+	height: 100%;
+	border: 0.1rem solid rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5rem;
+    background-color: rgb(184, 179, 179);
+}
+
+.villa_amarillo{
+    text-align: center;
+	line-height: 11rem;
+	width: 100%;
+	height: 100%;
+	border: 0.1rem solid rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5rem;
+    background-color: yellow;
+}
+
+.villa_rojo{
+    text-align: center;
+	line-height: 11rem;
+	width: 100%;
+	height: 100%;
+	border: 0.1rem solid rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5rem;
+    background-color:red;
+}
+
+.villa-vertical {
+	display: flex;
+	flex-direction: column;
+}
+
+.garita {
+	position: absolute;
+	background-color: green;
+	width: 10%;
+	height: 3.2rem;
+	top: 100%;
+	left: 12%;
+	transform: translate(0, -50%);
+	border: 0.1rem solid rgb(0, 0, 0);
+}
+
+.garita::before {
+	content: "Garita";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translate(-50%);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.garita {
+	position: absolute;
+	background-color: green;
+	width: 10%;
+	height: 3.2rem;
+	top: 100%;
+	left: 12%;
+	transform: translate(0, -50%);
+	border: 0.1rem solid rgb(0, 0, 0);
+}
+
+.garita::before {
+	content: "Garita";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translate(-50%);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+}
