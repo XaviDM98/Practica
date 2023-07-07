@@ -4,12 +4,11 @@
 
 .container {
     display: grid;
-    grid-template: 150px 1fr 80px / 1px 1fr;
+    grid-template: 150px 1fr 50px / 200px 1fr;
     grid-template-areas: "header header" "left content" "footer footer";
     grid-gap: 5px;
     height: 100vh;
 }
-
 
 .menu {
     margin: 5px;
@@ -27,12 +26,12 @@ a:hover.menu {
 }
 
 a:active.menu {
-    background-color: #FFC300 ;
+    background-color: brown;
     color: white;
 }
 
 .item {
-    background-color: #FFC300 ;
+    background-color: dodgerblue;
     padding: 10px;
     border: 1px solid black;
 }
@@ -43,13 +42,13 @@ a:active.menu {
 
 .left {
     grid-area: left;
-    display: #F8F2E8;
+    display: flex;
     flex-direction: column;
 }
 
 .content {
     grid-area: content;
-    background-color: #F8F2E8;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,11 +56,11 @@ a:active.menu {
 }
 
 .item-form {
-    width: 700px;
+    width: 400px;
     margin: 5px;
 }
 
-.item-form-label {  
+.item-form-label {
     display: block;
     float: left;
     width: 150px;
