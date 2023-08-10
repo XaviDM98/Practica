@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Vendedor</title>
+</head>
+<body>
+    <div class="container">
+        <h1>QR CODE SCANNER</h1>
+        <div class="product-list">
+            <div class="product">
+                <h2>Producto 1   $1.50</h2>
+                <img src="https://d2o812a6k13pkp.cloudfront.net/fit-in/455x455/Productos/40489185_0120221102162340.jpg" alt="Producto 1" class="product-image">
+                <button class="product-button" onclick="openQRScanner('Producto 1')">Vender</button>
+            </div>
+            <div class="product">
+                <h2>Producto 2   $3.00</h2>
+                <img src="https://d2o812a6k13pkp.cloudfront.net/fit-in/455x455/Productos/40391052_01.jpg" alt="Producto 2" class="product-image">
+                <button class="product-button" onclick="openQRScanner('Producto 2')">Vender</button>
+            </div>
+            <div class="product">
+                <h2>Producto 3   $2.00</h2>
+                <img src="https://d2o812a6k13pkp.cloudfront.net/fit-in/455x455/Productos/40480861_0120220908162330.jpg" alt="Producto 3" class="product-image">
+                <button class="product-button" onclick="openQRScanner('Producto 3')">Vender</button>
+            </div>
+            <div class="product">
+                <h2>Producto 4   $1.00</h2>
+                <img src="https://d2o812a6k13pkp.cloudfront.net/fit-in/455x455/Productos/40496048_0120221223163530.jpg" alt="Producto 4" class="product-image">
+                <button class="product-button" onclick="openQRScanner('Producto 4')">Vender</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openQRScanner(productName) {
+            // Aquí puedes agregar la lógica para abrir el escáner de código QR
+            alert(`Escanea el código QR para vender el producto: ${productName}`);
+        }
+    </script>
+</body>
+</html>
