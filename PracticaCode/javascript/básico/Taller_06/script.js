@@ -7,32 +7,54 @@ let articulos = [
     { nombre: 'Laptop Dell', modelo: 'Core i7 11va, 512gb ssd, 16gb, tec iluminado', costo: 1207.51 }
 ]
 
-const imprimirArticulo = (objeto) => {
-    console.log( `${objeto.nombre} - ${objeto.modelo}, Valor: ${objeto.costo}` )
+const imprimir_articulo = (objeto) => {
+    console.log(`${objeto.nombre} - ${objeto.modelo}, valor: $${objeto.costo}`)
 }
 
-console.log('==================================')
-console.log('Uso del FOREACH')
-console.log('==================================')
+//for (let elemento of articulos) {
+//    imprimir_articulo(elemento)
+//}
 
-articulos.forEach( function(elemento) {
-    console.log( elemento.nombre )
-} )
+console.log('=========================================================')
+console.log('USO DEL FOREACH')
+console.log('=========================================================')
 
-articulos.forEach( imprimirArticulo )
+articulos.forEach( (articulo) => imprimir_articulo(articulo) )
 
-console.log('==================================')
-console.log('Uso del SOME')
-console.log('==================================')
+console.log('=========================================================')
+console.log('USO DEL SOME')
+console.log('=========================================================')
 
 let articulos_baratos = articulos.some( (articulo) => articulo.costo <= 100 )
-console.log( articulos_baratos )
+console.log(articulos_baratos)
 
-const existen_articulos_caros = (dato) => dato.costo > 1000
+console.log('=========================================================')
+console.log('USO DEL FILTER')
+console.log('=========================================================')
 
-let articulos_caros = articulos.some( existen_articulos_caros )
-console.log( articulos_caros )
+let articulos_baratos_lst = articulos.filter( (articulo) => articulo.costo <= 1000 )
+articulos_baratos_lst.forEach( (articulo) => imprimir_articulo(articulo) )
+
+console.log('=========================================================')
+console.log('USO DEL MAP')
+console.log('=========================================================')
+
+let articulos_actualizados = articulos.map( (dato) => dato.nombre.toUpperCase() )
+articulos_actualizados.forEach( (dato) => console.log(dato) )
+
+
+let articulos_actualizados2 = articulos.map( 
+    (dato) => { 
+        dato.nombre = dato.nombre.toUpperCase() 
+        return dato
+    }
+)
+articulos_actualizados2.forEach( (articulo) => imprimir_articulo(articulo) )
 
 console.log('==================================')
-console.log('Uso del FILTER')
+console.log('Uso de FIND')
 console.log('==================================')
+
+//articulos.forEach( (articulo) => imprimir_articulo(articulo) )
+let articulo_encontrado = articulos.find( (dato) => dato.nombre == 'TV SONY' )
+console.log( articulo_encontrado )
