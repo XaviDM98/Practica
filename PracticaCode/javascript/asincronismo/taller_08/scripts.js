@@ -1,7 +1,5 @@
 const API = 'https://rickandmortyapi.com/api/character/'
 
-var xhttp = null
-
 function personaje(texto) {
     let div = document.createElement('div')
     let h1_texto = document.createTextNode(texto.name)
@@ -16,34 +14,37 @@ function personaje(texto) {
     contenedor.appendChild( div )
 }
 
-function cargar_datos(url_api, fn) {
-    xhttp = new XMLHttpRequest()
-    xhttp.open('GET', url_api, true)
-    xhttp.onreadystatechange = function(e) {
-        if (xhttp && xhttp.readyState == 4) {
-            if (xhttp.status == 200) {
-                fn(null, JSON.parse(xhttp.responseText))
-            } else {
-                const error = `[error]: ${url_api}`
-                fn(error, null)
-            }
-        }
-    }
-    xhttp.send()
+function obtener_personaje(id) {
+    return new Promise((resolve, reject) => {
+        fetch(`${API}${id}`)
+            .then((data) => resolve(data.json()))
+            .catch((error) => reject(`[error]: ${error}`))
+    })
 }
 
-const invocacionAsincronica = function(error, data) {
-    if (error)
-        return console.error( error )
-
-    for (let i=0; i<10; i++) {
-        cargar_datos( API + data.results[i].id, function(error2, data2) {
-            if (error2)
-                return console.error( error2 )
-            
-            personaje(data2)
-        })
-    }
-}
-
-cargar_datos(API, invocacionAsincronica)
+obtener_personaje(1)
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(2) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(3) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(4) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(5) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(6) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(7) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(8) } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(9) } )
+    .then( (data) => personaje(data) )
