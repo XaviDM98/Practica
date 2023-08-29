@@ -1,7 +1,5 @@
 const API = 'https://rickandmortyapi.com/api/character/'
 
-var xhttp = null
-
 function personaje(texto) {
     let div = document.createElement('div')
     let h1_texto = document.createTextNode(texto.name)
@@ -16,39 +14,15 @@ function personaje(texto) {
     contenedor.appendChild( div )
 }
 
-function cargar_datos(url_api) {
-    return new Promise((resolve, reject) => {
-        xhttp = new XMLHttpRequest()
-        xhttp.open('GET', url_api, true)
-        xhttp.onreadystatechange = function(e) {
-            if (xhttp && xhttp.readyState == 4) {
-                (xhttp.status == 200) 
-                    ? resolve(JSON.parse(xhttp.responseText)) 
-                    : reject(`[error]: ${url_api}`)
-            }
-        }
-        xhttp.send()    
-    })
+async function obtener_personaje(id) {
+    try {
+        let response = await fetch(`${API}${id}`)
+        return personaje( await response.json() )
+    } catch(error) {
+        console.error(`[error]: ${error}`)
+    }
 }
 
-function obtener_personaje(id) {
-    cargar_datos( `${API}${id}` )
+for (let i=1; i<=50; i++) {
+    obtener_personaje(i)
 }
-
-obtener_personaje(1)
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(2)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(3)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(4)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(5)
-    } )
