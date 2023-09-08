@@ -1,2 +1,2 @@
-# listaEstudiante
-ListaEstudiantes
+# listaEstudiante y Docente
+ListaEstudiantes y Docente
